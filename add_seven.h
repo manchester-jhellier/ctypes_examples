@@ -4,8 +4,22 @@
 
 #ifndef CXX_LIBRARY_TESTS_ADD_SEVEN_H
 #define CXX_LIBRARY_TESTS_ADD_SEVEN_H
+extern "C" {
+void array_add_seven(const double *in, int size, double *out);
+}
 
-extern "C" { ;
+extern "C" {
+
 int add_seven(int);
+
+double *direct_add_seven(double *in, int size);
+
+struct TestStruct {
+    double x;
+    int y;
+};
+
+void double_struct(TestStruct *in, TestStruct *out);
+
 }
 #endif //CXX_LIBRARY_TESTS_ADD_SEVEN_H
