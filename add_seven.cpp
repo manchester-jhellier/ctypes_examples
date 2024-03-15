@@ -24,9 +24,15 @@ double *direct_add_seven(double *in, int size) {
     return out;
 }
 
-void double_struct(TestStruct *in, TestStruct *out) {
-    out->x = 2 * in->x;
-    out->y = 2 * in->y;
+void double_struct(TestStruct &in, TestStruct &out) {
+    out.x = 2 * in.x;
+    out.y = 2 * in.y;
+}
+
+void sum_two_arrays(TwoArrays &in, OneArray &out) {
+    for (unsigned int i = 0; i < in.size; i++) {
+        out.x[i] = in.x[i] + in.y[i];
+    }
 }
 
 
