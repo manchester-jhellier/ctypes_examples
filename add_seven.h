@@ -31,6 +31,8 @@ struct TwoArrays{
 
 void sum_two_arrays(TwoArrays &in, OneArray &out);
 
+void sum_array(OneArray *in, double *out);
+
 void double_struct(TestStruct &in, TestStruct &out);
 
 }

@@ -35,4 +35,10 @@ void sum_two_arrays(TwoArrays &in, OneArray &out) {
     }
 }
 
-
+void sum_array(OneArray *in, double *out) {
+    double accumulator = 0.0;
+    for (unsigned int i = 0; i < in->size; i++) {
+        accumulator += in->x[i];
+    }
+    *out = accumulator;
+}
