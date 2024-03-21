@@ -1,18 +1,9 @@
-//
-// Created by jhellier on 23/01/24.
-//
-
 #ifndef CXX_LIBRARY_TESTS_ADD_SEVEN_H
 #define CXX_LIBRARY_TESTS_ADD_SEVEN_H
-extern "C" {
-void array_add_seven(const double *in, int size, double *out);
-}
+
 
 extern "C" {
-
-int add_seven(int);
-
-double *direct_add_seven(double *in, int size);
+    double *direct_add_seven(double *in, int size);
 
 struct TestStruct {
     double x;
@@ -30,9 +21,7 @@ struct TwoArrays{
 };
 
 void sum_two_arrays(TwoArrays &in, OneArray &out);
-
 void sum_array(OneArray *in, double *out);
-
 void double_struct(TestStruct &in, TestStruct &out);
 
 }
