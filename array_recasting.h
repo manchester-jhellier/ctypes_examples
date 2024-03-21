@@ -9,8 +9,6 @@ struct CLikeArray {
     std::size_t num_vecs;
     double *x;
 };
-void explicit_copy(CLikeArray &in, CLikeArray &out);
-void implicit_copy(CLikeArray &in, CLikeArray &out);
 }
 
 class VectorStorer {

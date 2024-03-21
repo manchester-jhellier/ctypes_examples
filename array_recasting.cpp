@@ -9,8 +9,8 @@ VectorStorer::VectorStorer(std::size_t n) {
 
 VectorStorer::VectorStorer(CLikeArray &c_like_array) {
     num_vecs = c_like_array.num_vecs;
-    x = std::vector < std::array < double, 3 >> (reinterpret_cast<std::array<double, 3> *>(c_like_array.x),
-            reinterpret_cast<std::array<double, 3> *>(c_like_array.x) + num_vecs);
+    x = std::vector<std::array<double, 3 >>(reinterpret_cast<std::array<double, 3> *>(c_like_array.x),
+                                            reinterpret_cast<std::array<double, 3> *>(c_like_array.x) + num_vecs);
 }
 
 void VectorStorer::copy_into_array(CLikeArray &c_like_array) {
@@ -29,16 +29,6 @@ VectorStorer VectorStorer::from_array(CLikeArray &c_like_array) {
         }
     }
     return vec_store;
-}
-
-void explicit_copy(CLikeArray &in, CLikeArray &out) {
-    auto vec_store = VectorStorer::from_array(in);
-    vec_store.copy_into_array(out);
-}
-
-void implicit_copy(CLikeArray &in, CLikeArray &out) {
-    auto vec_store = VectorStorer(in);
-    vec_store.copy_into_array(out);
 }
 
 void vec_store_sum(VectorStorer &in_x, VectorStorer &in_y, VectorStorer &out) {
