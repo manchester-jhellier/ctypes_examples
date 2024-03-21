@@ -54,4 +54,5 @@ void array_sum(CLikeArray &x_in, CLikeArray &y_in, CLikeArray &out) {
     auto v = VectorStorer(y_in);
     auto w = VectorStorer(out);
     vec_store_sum(u, v, w);
+    w.copy_into_array(out);
 }
