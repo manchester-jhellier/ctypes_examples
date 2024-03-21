@@ -26,6 +26,8 @@ public:
     void copy_into_array(CLikeArray &c_like_array);
 
     static VectorStorer from_array(CLikeArray &c_like_array);
+
+    static VectorStorer &sum(VectorStorer &x, VectorStorer &y);
 };
 
 #endif //CXX_LIBRARY_TESTS_ARRAY_RECASTING_H
